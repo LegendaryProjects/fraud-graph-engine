@@ -1,0 +1,26 @@
+# 1. C++ Build Artifacts (Engine)
+*.o
+*.out
+*.exe
+bin/
+build/
+
+# 2. Heavy Datasets (Never commit 160MB CSV files)
+data/*.csv
+data/*.bin
+
+# 3. Python Virtual Envs & Cache (Scripts)
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# 4. Web Dashboard Frameworks/Libraries
+dashboard/node_modules/
+dashboard/dist/
+dashboard/.next/
+
+# 5. OS & IDE Hidden Files
+.DS_Store
+*.suo
+*.user
