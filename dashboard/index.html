@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Fraud Graph Analytics | STM + AVX2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css?v=3">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="brand-wrapper">
+            <div class="brand-info">
+                <h1>Real-Time Streaming Graph Analytics</h1>
+                <div class="arch-pills">
+                    <span class="arch-pill"><span class="pill-indicator"></span>Dynamic Chunked CSR</span>
+                    <span class="arch-pill"><span class="pill-indicator"></span>Hybrid STM</span>
+                    <span class="arch-pill"><span class="pill-indicator"></span>SIMD Cycle Detector</span>
+                    <span class="arch-pill"><span class="pill-indicator"></span>Epoch-Based Reclamation</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-status">
+            <div class="status-dot-container" id="status-indicator" title="Live Telemetry Status">
+                <span class="ping-ring"></span>
+                <span class="dot"></span>
+            </div>
+            <div class="sync-badge" id="last-sync-time">Polling: 1000ms</div>
+        </div>
+    </header>
+
+    <div class="kpi-container">
+        <div class="kpi-card kpi-edges">
+            <div class="kpi-header">
+                <h3>Total Edges Processed</h3>
+                <div class="kpi-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="6" y1="3" x2="6" y2="15"></line>
+                        <circle cx="18" cy="6" r="3"></circle>
+                        <circle cx="6" cy="18" r="3"></circle>
+                        <path d="M18 9a9 9 0 0 1-9 9"></path>
+                    </svg>
+                </div>
+            </div>
+            <p id="total-edges">0</p>
+            <div class="kpi-footer">
+                <span>Stream Ingestion Pipeline</span>
+            </div>
+        </div>
+
+        <div class="kpi-card kpi-runtime">
+            <div class="kpi-header">
+                <h3>Total Runtime</h3>
+                <div class="kpi-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                </div>
+            </div>
+            <p id="total-runtime">0.000 s</p>
+            <div class="kpi-footer">
+                <span>Active Execution Session</span>
+            </div>
+        </div>
+
+        <div class="kpi-card kpi-peak">
+            <div class="kpi-header">
+                <h3>Peak Throughput</h3>
+                <div class="kpi-icon">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                    </svg>
+                </div>
+            </div>
+            <p id="peak-throughput" class="highlight">0 tx/sec</p>
+            <div class="kpi-footer">
+                <span>Max Scaled Multi-Thread Rate</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="charts-container">
+        <div class="chart-card">
+            <div class="chart-header">
+                <div class="chart-title-area">
+                    <h3>Throughput Scaling</h3>
+                </div>
+            </div>
+            <div class="chart-wrapper">
+                <canvas id="throughputChart"></canvas>
+            </div>
+        </div>
+
+        <div class="chart-card">
+            <div class="chart-header">
+                <div class="chart-title-area">
+                    <h3>Hardware Speedup</h3>
+                </div>
+            </div>
+            <div class="chart-wrapper">
+                <canvas id="speedupChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid-container">
+        <div class="table-card">
+            <div class="table-header">
+                <h3>Thread Scaling Performance</h3>
+            </div>
+            <div class="table-scroll-wrapper">
+                <table id="scaling-table">
+                    <thead>
+                        <tr>
+                            <th>Threads</th>
+                            <th>Throughput (tx/sec)</th>
+                            <th>Latency (ms)</th>
+                            <th>Self Speedup (vs 1T)</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="table-card">
+            <div class="table-header">
+                <h3>Active Fraud Ring Alerts</h3>
+                <span id="alerts-count-badge" class="badge-counter">Top 100 Alerts</span>
+            </div>
+            <div class="table-scroll-wrapper" id="alerts-scroll-container">
+                <table id="alerts-table">
+                    <thead>
+                        <tr>
+                            <th>Alert ID</th>
+                            <th>Fraud Type</th>
+                            <th>Source Node</th>
+                            <th>Target Node</th>
+                            <th>Detection Time (µs)</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js?v=3"></script>
+</body>
+</html>

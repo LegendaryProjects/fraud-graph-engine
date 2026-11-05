@@ -1,0 +1,745 @@
+{
+  "timestamp": 1793809152644,
+  "total_edges_processed": 3000000,
+  "total_runtime_seconds": 26.858,
+  "scaling_metrics": [
+    {
+      "threads": 1,
+      "throughput": 18638425.72,
+      "latency_ms": 0.0011,
+      "speedup": 1.00
+    },
+    {
+      "threads": 2,
+      "throughput": 10258430.38,
+      "latency_ms": 0.0011,
+      "speedup": 0.55
+    },
+    {
+      "threads": 4,
+      "throughput": 15409887.60,
+      "latency_ms": 0.0024,
+      "speedup": 0.83
+    },
+    {
+      "threads": 8,
+      "throughput": 13378105.39,
+      "latency_ms": 0.0024,
+      "speedup": 0.72
+    },
+    {
+      "threads": 12,
+      "throughput": 7733748.69,
+      "latency_ms": 0.0024,
+      "speedup": 0.41
+    },
+    {
+      "threads": 16,
+      "throughput": 12767609.09,
+      "latency_ms": 0.0024,
+      "speedup": 0.69
+    }
+  ],
+  "recent_alerts": [
+    {
+      "alert_id": 321,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 450,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 322,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 450,
+      "target_node": 2,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 323,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 451,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 324,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 451,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 325,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 451,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 326,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 451,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 327,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 452,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 328,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 452,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 329,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 453,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 330,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 453,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 331,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 832,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 332,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 843,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 333,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 843,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 334,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 843,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 335,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 843,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 336,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 844,
+      "target_node": 2,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 337,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 844,
+      "target_node": 2,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 338,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 847,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 339,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 847,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 340,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 850,
+      "target_node": 4,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 341,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 851,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 342,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 852,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 343,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 853,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 344,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 853,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 345,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 857,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 346,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 320,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 347,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 320,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 348,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 320,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 349,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 320,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 350,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 320,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 351,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 320,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 352,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 321,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 353,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 321,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 354,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 321,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 355,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 321,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 356,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 321,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 357,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 321,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 358,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 321,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 359,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 321,
+      "target_node": 2,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 360,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 321,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 361,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 961,
+      "target_node": 2,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 362,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 962,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 363,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 963,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 364,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 965,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 365,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 965,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 366,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 972,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 367,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 979,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 368,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 980,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 369,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 983,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 370,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 983,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 371,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 989,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 372,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 990,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 373,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 993,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 374,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 998,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 375,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 1006,
+      "target_node": 2,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 376,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 641,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 377,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 642,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 378,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 643,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 379,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 643,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 380,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 645,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 381,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 646,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 382,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 646,
+      "target_node": 2,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 383,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 647,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 384,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 649,
+      "target_node": 2,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 385,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 650,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 386,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 650,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 387,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 652,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 388,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 654,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 389,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 654,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 390,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 654,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 391,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 512,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 392,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 512,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 393,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 512,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 394,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 512,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 395,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 512,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 396,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 513,
+      "target_node": 2,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 397,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 514,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 398,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 514,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 399,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 515,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 400,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 516,
+      "target_node": 2,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 401,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 517,
+      "target_node": 2,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 402,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 518,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 403,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 518,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 404,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 518,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 405,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 518,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 406,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 576,
+      "target_node": 2,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 407,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 577,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 408,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 577,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 409,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 579,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 410,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 579,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 411,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 579,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 412,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 581,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 413,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 582,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 414,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 582,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 415,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 582,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 416,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 582,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 417,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 582,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 418,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 583,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 419,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 583,
+      "target_node": 1,
+      "latency_us": 2.40
+    },
+    {
+      "alert_id": 420,
+      "type": "DIRECTED_CYCLE",
+      "source_node": 583,
+      "target_node": 1,
+      "latency_us": 2.40
+    }
+  ]
+}
