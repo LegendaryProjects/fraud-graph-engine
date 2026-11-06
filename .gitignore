@@ -8,6 +8,8 @@ build/
 # 2. Heavy Datasets (Never commit 160MB CSV files)
 data/*.csv
 data/*.bin
+transactions.bin
+*.bin
 
 # 3. Python Virtual Envs & Cache (Scripts)
 __pycache__/

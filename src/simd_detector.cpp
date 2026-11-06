@@ -1,5 +1,6 @@
 #include "../include/simd_detector.hpp"
 #include <immintrin.h>
+#include <x86intrin.h> // Added for hardware cycle counters (__rdtsc)
 #include <omp.h>
 #include <algorithm>
 
@@ -32,20 +33,26 @@ std::vector<DetectionResult> SIMDDetector::run_parallel_detection(ChunkedCSR& gr
             NodeDescriptor& node = graph.get_node(i);
             Chunk* curr = node.head.load(std::memory_order_acquire);
             
-            // Check for high-degree Mule Clusters
+            // Check for high-degree Mule Clusters dynamically
+            unsigned long long start_mule = __rdtsc();
             int total_degree = 0;
             Chunk* temp = curr;
             while(temp != nullptr) {
                 total_degree += temp->get_count(std::memory_order_acquire);
                 temp = temp->get_next(std::memory_order_acquire);
             }
+            
             if (total_degree > 25 && curr != nullptr) {
+                unsigned long long end_mule = __rdtsc();
+                
                 DetectionResult alert;
                 alert.is_fraud = true;
                 alert.type = FraudType::MULE_CLUSTER;
                 alert.source_node = i;
                 alert.target_node = curr->edges[0];
-                alert.detection_latency_us = 1.1; 
+                // Convert cycles to microseconds (Assuming ~3.0 GHz base clock)
+                alert.detection_latency_us = (end_mule - start_mule) / 3000.0; 
+                
                 if (thread_local_alerts.size() < 15) thread_local_alerts.push_back(alert);
             }
             
@@ -61,13 +68,18 @@ std::vector<DetectionResult> SIMDDetector::run_parallel_detection(ChunkedCSR& gr
                         Chunk* n_curr = n_node.head.load(std::memory_order_acquire);
                         
                         while (n_curr != nullptr) {
+                            unsigned long long start_cycle = __rdtsc();
+                            
                             if (scan_chunk_avx2(n_curr, i)) {
+                                unsigned long long end_cycle = __rdtsc();
+                                
                                 DetectionResult alert;
                                 alert.is_fraud = true;
                                 alert.type = FraudType::DIRECTED_CYCLE;
                                 alert.source_node = i;
                                 alert.target_node = neighbor;
-                                alert.detection_latency_us = 2.4; 
+                                alert.detection_latency_us = (end_cycle - start_cycle) / 3000.0; 
+                                
                                 if (thread_local_alerts.size() < 15) thread_local_alerts.push_back(alert);
                                 break;
                             }
@@ -81,7 +93,7 @@ std::vector<DetectionResult> SIMDDetector::run_parallel_detection(ChunkedCSR& gr
         
         #pragma omp critical
         {
-            if (global_alerts.size() < 100) { // Increased limit to 100
+            if (global_alerts.size() < 100) { 
                 global_alerts.insert(global_alerts.end(), 
                                      thread_local_alerts.begin(), 
                                      thread_local_alerts.end());
